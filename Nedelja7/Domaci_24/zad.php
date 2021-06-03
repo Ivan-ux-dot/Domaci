@@ -10,17 +10,18 @@
 <?php
 $x=[1,2,3,4];
 function nula($x){
-    $nesadrzi=true;
+    
     for($i=0;$i<count($x);$i++){
-        if($x[$i] == 0){
-            $nesadrzi= false;
-            return $nesadrzi;
+        if($x[$i] === 0){
+            return false;
+            
         }
       
     }
+    return true;
 }
-$nesadrzi=nula($x);
-if($nesadrzi)
+
+if(nula($x))
     echo "NE sadrzi 0";
 else
     echo "Sadrzi 0";
